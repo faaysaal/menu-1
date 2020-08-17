@@ -108,7 +108,7 @@ ul li a .name span::before {
 @media(max-width:991.98px){
     .toggle{
         display: block;
-        top: 30px;
+        top: 0px;
         left: 50%;
         right: auto;
         transform: translateX(-50%);
@@ -154,23 +154,17 @@ ul li a .name span::before {
         font-size: 23px;
     }
 }
+@media(max-width:767.98px){
+    .toggle{
+        display: block;
+        top: 30px;
+        right: 30px;
+        left: auto;
+    }
+}
 /******** Responsive ************/
 
   
-
-  
-  
-   
-
-
-
-
-
-
-
-
-
-
 
 
 
