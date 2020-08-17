@@ -125,11 +125,12 @@ ul li a .name span::before {
      ul{
         display: none;
     }  
-    ul.active{
-        padding: 0;
-        width: 90%;
-        display: block;
-    } 
+    ul.active {
+	padding: 0;
+	width: 90%;
+	display: block;
+	top: 50%;
+   }
     ul li{
         display: block;
         padding: 10px 0;
