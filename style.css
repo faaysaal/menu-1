@@ -1,337 +1,166 @@
-/*
-	Theme Name :APPRi HTML Template
-	Author:
-	Support:admin@gmail.com
-	Description:Creative HTML5 Template
-	Version:1.0
-*/
-/*CSS IndeX:
--------------------
-1)Theme Default CSS
-2)Header
-3)Slider
-4)About Area
-5)Features Box
-6)Department
-7)Team
-8)Video-Area
-9)Counter
-10)Footer
-	
-*/
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
-    outline: 0;
     box-sizing: border-box;
+    outline: 0;
 }
 body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    line-height: 25px;
-    font-weight: 400;
-	color:#444;
+    font-family: tahoma;
+    background-image: url(assets/img/menu-bg.jpg);
+    background-size: cover;
+    height: 100vh;
 }
-button:focus,input:focus,textarea:focus{
-	outline:0;
-}
-
-::-moz-selection {
-  background: #b3d4fc;
-  text-shadow: none;
+.container{
+    width: 1170px;
+    margin: auto;
 }
 
-::selection {
-  background: #b3d4fc;
-  text-shadow: none;
-}
-
-/*
- * A better looking default horizontal rule
- */
-
-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #ccc;
-  margin: 1em 0;
-  padding: 0;
-}
-
-/*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-  vertical-align: middle;
-}
-
-/*
- * Remove default fieldset styles.
- */
-
-fieldset {
-  border: 0;
-  margin: 0;
-  padding: 0;
-}
-
-/*
- * Allow only vertical resizing of textareas.
- */
-
-textarea {
-  resize: vertical;
-}
-
-/* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-/*
- * Hide visually and from screen readers
- */
-
-.hidden,
-[hidden] {
-  display: none !important;
-}
-
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- * 1. For long content, line feeds are not interpreted as spaces and small width
- *    causes content to wrap 1 word per line:
- *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
- */
-
-.sr-only {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  /* 1 */
-}
-
-/*
- * Extends the .sr-only class to allow the element
- * to be focusable when navigated to via the keyboard:
- * https://www.drupal.org/node/897638
- */
-
-.sr-only.focusable:active,
-.sr-only.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  white-space: inherit;
-  width: auto;
-}
-
-/*
- * Hide visually and from screen readers, but maintain layout
- */
-
-.invisible {
-  visibility: hidden;
-}
-h1,h2,h3,h4,h5,h6{
-	font-family: 'Open Sans', sans-serif;
-    font-weight:700;
-    color: #393542;
-    margin: 0;
-}
-h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{
-    color: inherit;
-    text-decoration: none;
-    display: block;
-}
-
-.fix{
-    overflow: hidden;
-}
-.clearfix::before,
-.clearfix::after {
-  content: " ";
-  display: table;
-}
-
-.clearfix::after {
-  clear: both;
-}
-img{
-    max-width: 100%;
-    transition: all 0.3s ease-in-out;
-}
 ul{
-    list-style: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 20px 0;
+    background: #fff;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
-a{
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+ul li {
+	list-style: none;
+	text-align: center;
+	display: block;
+	border-right: 1px solid rgba(0,0,0,0.2);
 }
-/* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+ul li a {
+	display: block;
+	text-decoration: none;
+	padding: 0 50px;
 }
-
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+ul li a .icon {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	overflow: hidden;
+	margin: 0 auto 10px;
 }
-
-/* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
-
-@media print {
-  *,
-  *::before,
-  *::after {
-    background: #fff !important;
-    color: #000 !important;
-    /* Black prints faster */
-    box-shadow: none !important;
-    text-shadow: none !important;
-  }
-
-  a,
-  a:visited {
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  a[href]::after {
-    content: " (" attr(href) ")";
-  }
-
-  abbr[title]::after {
-    content: " (" attr(title) ")";
-  }
-
-  /*
-   * Don't show links that are fragment identifiers,
-   * or use the `javascript:` pseudo protocol
-   */
-  a[href^="#"]::after,
-  a[href^="javascript:"]::after {
-    content: "";
-  }
-
-  pre {
-    white-space: pre-wrap !important;
-  }
-
-  pre,
-  blockquote {
-    border: 1px solid #999;
-    page-break-inside: avoid;
-  }
-
-  /*
-   * Printing Tables:
-   * 
-   */
-  thead {
-    display: table-header-group;
-  }
-
-  tr,
-  img {
-    page-break-inside: avoid;
-  }
-
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3;
-  }
-
-  h2,
-  h3 {
-    page-break-after: avoid;
-  }
+ul li a .icon i{
+	width: 100%;
+    height: 100%;
+    line-height: 40px;
+    font-size: 25px;
+    transition: .5s;
+    color: #000;
 }
-/********* Header *******/
-.transparent-header {
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
+ul li a .icon i:last-child{
+    color: #e91e63;
 }
-.header-logo a{
-    display: inline-block;
+ul li a:hover .icon i{
+    transform: translateY(-100%);
 }
-.header-logo a img{
-    display:block;
+ul li a .name {
+	position: relative;
+	height: 20px;
+	width: 100%;
+	display: block;
+	overflow: hidden;
 }
-.header-menu ul li{
-    display: inline-block;
-    margin-right: 30px;
-}
-.header-menu ul li a{
-    display: block;
-    text-transform: capitalize;
-    color: #cfcfd8;
-    text-decoration: none;
-    padding: 60px 0;
-    font-size: 18px;
-}
-.header-menu ul li:hover a{
-    color: #ffffff;
-}
-.header-btn a.btn {
-	padding: 15px 45px;
-	background-color: #6d5edf;
-	border-radius: 30px;
-	color: #ffffff;
+ul li a .name span {
+	position: relative;
+	display: block;
+	color: #000;
 	font-size: 18px;
+	line-height: 20px;
+	transition: .5s;
 }
+ul li a:hover .name span{
+    transform: translateY(20px);
+}
+ul li a .name span::before {
+	content: attr(data-text);
+	position: absolute;
+	top: -100%;
+	left: 0;
+	width: 100%;
+    height: 100%;
+    color:#e91e63;
+}
+.toggle {
+	position: fixed;
+	background: #ffff;
+	top: 30px;
+	right: 30px;
+	font-weight: bold;
+	border-radius: 4px;
+	cursor: pointer;
+    display: none;
+    text-align: center;
+}
+.toggle i {
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	font-size: 25px;
+}
+/***** Responsive *******/
+@media(max-width:991.98px){
+    .toggle{
+        display: block;
+        top: 30px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+    .toggle i.fa-times{
+        display: none;
+    }
+    .toggle i.fa-times.active{
+        display: block;
+    }
+    i.fa-bars.active{
+        display: none;
+    }
+     ul{
+        display: none;
+    }  
+    ul.active{
+        padding: 0;
+        width: 90%;
+        display: block;
+    } 
+    ul li{
+        display: block;
+        padding: 10px 0;
+        border-bottom:1px solid rgba(0,0,0,0.2) ;
+    }
+    ul li:last-child{
+        border-bottom:none;
+    }
+    ul li a{
+        padding: 0 20px;
+    }
+    ul li a .icon{
+        display: inline-block;
+        margin: 0 auto;
+    }
+    ul li a .name{
+        width: auto;
+        display: inline-block;
+        margin: 10px;
+    }
+    ul li a .icon i {
+        font-size: 23px;
+    }
+}
+/******** Responsive ************/
 
+  
 
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+   
 
 
 
